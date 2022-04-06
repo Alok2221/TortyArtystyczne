@@ -1,15 +1,13 @@
-package pl.zaczarowaneslodkosci;
+package pl.zaczarowaneslodkosci.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "cake")
 public class CakeEntity {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
     private String name;
     private String color;
 
