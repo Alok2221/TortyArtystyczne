@@ -6,12 +6,14 @@ import pl.zaczarowaneslodkosci.dto.CakeDtoResponse;
 import pl.zaczarowaneslodkosci.entity.CakeEntity;
 import pl.zaczarowaneslodkosci.repository.CakeRepository;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 import static java.util.stream.Collectors.toList;
 import static org.springframework.beans.BeanUtils.copyProperties;
 
 @Service
+@Transactional
 public class CakeServiceImpl implements CakeService {
 
     private final CakeRepository cakeRepository;

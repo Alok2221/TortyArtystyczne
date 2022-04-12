@@ -9,7 +9,7 @@ public class CakeController {
 
     @GetMapping("/start")
     public String goTest(Model model) {
-        model.addAttribute("title", "My Title");
+        model.addAttribute("title", "My title");
         return "start";
     }
 }
